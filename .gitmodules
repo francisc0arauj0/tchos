@@ -1,0 +1,10 @@
+[submodule "tchux"]
+    path = tchux
+    url = https://github.com/francisc0arauj0/tchux
+
+[submodule "tchboot"]
+    path = tchboot
+    url = https://github.com/francisc0arauj0/tchboot
+
+
+
