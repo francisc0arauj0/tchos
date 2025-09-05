@@ -1,4 +1,8 @@
 <p align="center">
+    <img src=".github/demo.png" alt="TchOS logo"/>
+</p>
+
+<p align="center">
     <p align="center">A simple operating system</p>
 </p>
 
