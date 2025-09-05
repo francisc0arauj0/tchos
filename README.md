@@ -7,7 +7,7 @@
 </p>
 
 > [!IMPORTANT]
-This project isn’t intended to be bootable on a real PC. It’s mainly for testing, experimentation, or just to see if it catches interest. Honestly, I’m not sure what it might become.
+> This project is not yet ready to be used in a real system.
 
 ## Table of Contents
 - [About Project](#about-project)
