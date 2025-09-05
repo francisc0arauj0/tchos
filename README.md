@@ -1,5 +1,5 @@
 <p align="center">
-    <img src=".github/demo.png" alt="TchOS logo"/>
+    <img src=".github/logo.png" alt="TchOS logo"/>
 </p>
 
 <p align="center">
