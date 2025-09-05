@@ -9,3 +9,8 @@
 [submodule "tchbuild"]
     path = tchbuild
     url = https://github.com/francisc0arauj0/tchbuild
+
+[submodule "tchlib"]
+    path = tchlib
+    url = https://github.com/francisc0arauj0/tchlib
+
