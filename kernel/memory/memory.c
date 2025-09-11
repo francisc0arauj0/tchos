@@ -15,7 +15,7 @@ void *memset(void *s, int c, u64 n)
 void *memcpy(void *restrict d, void *restrict s, u64 n)
 {
     u8 *restrict pd = (u8 *restrict)d;
-    const u8 *restrict ps = (const u8 *restrict);
+    const u8 *restrict ps = (const u8 *restrict)s;
 
     for (u64 i = 0; i < n; i++)
     {
