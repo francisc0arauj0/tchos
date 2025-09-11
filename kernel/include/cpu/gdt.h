@@ -6,17 +6,17 @@
 struct gdt_entry_struct
 {
     u16 limit;
-    u16 base_low;
-    u8 base_middle;
+    u16 base1;
+    u8 base2;
     u8 access;
     u8 flags;
-    u8 base_high;
+    u8 base3;
 } __attribute__((packed));
 
 struct gdt_ptr_struct
 {
-    u16 limit;
-    u64 base;
+    u16 size;
+    u64 offset;
 } __attribute__ ((packed));
 
 void gdt_setup();
