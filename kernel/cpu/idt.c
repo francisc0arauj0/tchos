@@ -3,15 +3,15 @@
 struct interrupt_descriptor_struct interrupts[256];
 struct idt_ptr_struct idt_ptr;
 
-void idt_set_gate(struct interrupt_descriptor_struct *interrupt, u8 id, void *offset, u8 type)
+void idt_set_gate(u8 id, void *offset, u8 type)
 {
-   interrupt[id].offset1 = (u64)offset & 0xFFFF;
-   interrupt[id].offset2 = ((u64)offset >> 16) & 0xFFFF;
-   interrupt[id].offset3 = ((u64)offset >> 32) & 0xFFFFFFFF;
+   interrupts[id].offset1 = (u64)offset & 0xFFFF;
+   interrupts[id].offset2 = ((u64)offset >> 16) & 0xFFFF;
+   interrupts[id].offset3 = ((u64)offset >> 32) & 0xFFFFFFFF;
 
-   interrupt[id].type = type | 0x80;
-   interrupt[id].zero = 0;
-   interrupt[id].selector = 0x08;
+   interrupts[id].type = type | 0x80;
+   interrupts[id].zero = 0;
+   interrupts[id].selector = 0x08;
 }
 
 void idt_load(const struct idt_ptr_struct *idt_ptr)

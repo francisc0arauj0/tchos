@@ -22,6 +22,6 @@ struct idt_ptr_struct
 
 void idt_setup();
 void idt_load(const struct idt_ptr_struct *idt_ptr);
-void idt_set_gate(struct interrupt_descriptor_struct *interrupt, u8 id, void *offset, u8 type);
+void idt_set_gate(u8 id, void *offset, u8 type);
 
 #endif
