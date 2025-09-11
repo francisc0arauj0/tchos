@@ -25,12 +25,14 @@ KERNEL_BUILD:
 	mkdir obj/
 	$(CC) $(C_FLAGS) -c $(KERNEL_SRC)/entry/main.c -o obj/main.o
 	$(CC) $(C_FLAGS) -c $(KERNEL_SRC)/cpu/gdt.c -o obj/gdt.o
+	$(CC) $(C_FLAGS) -c $(KERNEL_SRC)/cpu/idt.c -o obj/idt.o
 	$(CC) $(C_FLAGS) -c $(KERNEL_SRC)/cpu/sse.c -o obj/sse.o
 	$(CC) $(C_FLAGS) -c $(KERNEL_SRC)/memory/memory.c -o obj/memory.o
 
 	$(LD) $(LD_FLAGS) -o $(KERNEL_OBJ) \
 		obj/main.o \
 		obj/gdt.o \
+		obj/idt.o \
 		obj/sse.o \
 		obj/memory.o
 
