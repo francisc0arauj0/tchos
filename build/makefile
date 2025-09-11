@@ -10,11 +10,11 @@ QEMU_FLAGS = -M q35 -m 2G -monitor stdio -d int -M smm=off
 XORRISO_FLAGS = -R -r -J -hfsplus -apm-block-size 2048 --efi-boot limine-uefi-cd.bin -efi-boot-part --efi-boot-image --protective-msdos-label
 
 KERNEL_SRC = ../kernel
-KERNEL_OBJ = obj/hamux_kernel
+KERNEL_OBJ = obj/tchos_kernel
 
 BOOTLOADER_SRC = ../bootloader
 
-ISO = hamux.iso
+ISO = tchos.iso
 
 all: $(ISO)
 
