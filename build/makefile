@@ -25,10 +25,12 @@ KERNEL_BUILD:
 	mkdir obj/
 	$(CC) $(C_FLAGS) -c $(KERNEL_SRC)/entry/main.c -o obj/main.o
 	$(CC) $(C_FLAGS) -c $(KERNEL_SRC)/cpu/gdt.c -o obj/gdt.o
+	$(CC) $(C_FLAGS) -c $(KERNEL_SRC)/cpu/sse.c -o obj/sse.o
 
 	$(LD) $(LD_FLAGS) -o $(KERNEL_OBJ) \
 		obj/main.o \
-		obj/gdt.o
+		obj/gdt.o \
+		obj/sse.o
 
 $(ISO): LIMINE_BUILD KERNEL_BUILD limine.conf
 	rm -rf iso_root
